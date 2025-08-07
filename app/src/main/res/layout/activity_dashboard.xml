@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_theme_primary"
+        app:titleTextColor="@color/white"
+        app:titleCentered="true"
+        app:title="Dashboard" >
+        <ImageView
+            android:id="@+id/uploadProduct"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/upload_svgrepo_com"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:padding="5dp"/>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="30dp"
+            app:strokeColor="#7E7B7B"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:drawablePadding="10dp"
+                    android:padding="5dp"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/search_svgrepo_com"
+                    android:hint="Search for Shirts,Trousers,etc."
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/products_item" />
+    </LinearLayout>
+
+</LinearLayout>

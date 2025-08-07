@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            app:cardCornerRadius="15dp">
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/shirtb"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Shirt"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/productDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Casual Shirt with Full Sleeves and Cotton Fabric "
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹20"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#3F51B5" />
+            <FrameLayout
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buyNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Buy Now"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
